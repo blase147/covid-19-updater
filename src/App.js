@@ -5,8 +5,8 @@ import {
   Route,
 
 } from 'react-router-dom';
+import Header from './components/Header';
 import HomePage from './components/HomePage';
-import Details from './components/Details';
 
 
 function App() {
@@ -16,7 +16,6 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/details" element={<Details />} />
       </Routes>
     </Router>
     </div>

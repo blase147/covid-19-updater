@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import detailsReducer from './rockets';
+import homePageReducer from './redux/homePage';
 
 const store = configureStore({
   reducer: {
-    details: detailsReducer,
+    data: homePageReducer,
   },
 });
 export default store;
