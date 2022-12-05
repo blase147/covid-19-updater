@@ -1,63 +1,74 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
-import { fetchData } from '../redux/homePage';
+import { NavLink } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
+import {
+  faCircleArrowRight,
+  faSearch,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { getCountries } from '../redux/details';
 
-const HomePage = (props) => {
-    const dispatch = useDispatch();
-    const {
-        date, 
-        symbol,
-        reportedCurrency, 
-        fillingDate,
-        acceptedDate,
-        calendarYear,
-        revenue,
-        costOfRevenue,
-        grossProfit,
-        grossProfitRatio,
-        researchAndDevelopmentExpenses,
-      } = props;
-    const shouldFetch = useRef(true);
-  
-    useEffect(() => {
-      if (shouldFetch.current) {
-        shouldFetch.current = false;
-        dispatch(fetchData());
-      }
-    }, []);
-    const dataArr = useSelector((state) => state.data);
-    if (dataArr.length > 0) {
-      return (
-        <div className="data-container">
-        {date}
-        {symbol}
-        {reportedCurrency}
-        {fillingDate}
-        {acceptedDate}
-        {calendarYear}
-        {revenue}
-        {costOfRevenue}
-        {grossProfit}
-        {grossProfitRatio}
-        {researchAndDevelopmentExpenses}
-        </div>
-      );
+const HomePage = () => {
+  const dispatch = useDispatch();
+  const { countries, status } = useSelector((state) => state.datas);
+  const [search, setSearch] = useState('');
+
+  useEffect(() => {
+    if (status === null) {
+      dispatch(getCountries());
     }
-    return '';
-}
-HomePage.propTypes = {
-    date: PropTypes.string.isRequired,
-    symbol: PropTypes.string.isRequired,
-    reportedCurrency: PropTypes.string.isRequired,
-    fillingDate: PropTypes.string.isRequired,
-    acceptedDate: PropTypes.string.isRequired,
-    calendarYear: PropTypes.string.isRequired,
-    revenue: PropTypes.string.isRequired,
-    costOfRevenue: PropTypes.string.isRequired,
-    grossProfit: PropTypes.string.isRequired,
-    grossProfitRatio: PropTypes.string.isRequired,
-    researchAndDevelopmentExpenses: PropTypes.string.isRequired,
-  };
+  });
+
+  return (
+    <div>
+      {status === 'pending' ? (
+        <div className="pending">
+          <h3> Loading...</h3>
+        </div>
+      ) : (
+        <>
+          <div className="search">
+            <div className="search_element">
+              <h1 className="live_preview">Live preview</h1>
+              <input
+                type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="search"
+                className="search_input"
+              />
+              <FontAwesomeIcon icon={faSearch} className="search_icon" />
+            </div>
+          </div>
+          <div className="display_flex">
+            {countries
+              .filter(
+                (searchCountry) => searchCountry.continent
+                  .toLowerCase()
+                  .includes(search.toLowerCase())
+                || searchCountry.continent
+                  .toLowerCase()
+                  .includes(search.toLowerCase()),
+              ).map((item) => (
+                <div key={uuidv4()} className="country_display">
+                  <NavLink state={item} to="/details">
+                    <FontAwesomeIcon
+                      icon={faCircleArrowRight}
+                      className="arrow-right"
+                    />
+                  </NavLink>
+                  <div className="update_countries">
+                    <h3>{item.continent}</h3>
+                    <p>{item.updated}</p>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
 
 export default HomePage;
