@@ -6,7 +6,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
-const Header = () => (
+const Heading = () => (
   <nav className="nav_bar">
     <Link to="/">
       <FontAwesomeIcon icon={faCircleArrowLeft} id="arrow-left" />
@@ -19,4 +19,4 @@ const Header = () => (
   </nav>
 );
 
-export default Header;
+export default Heading;

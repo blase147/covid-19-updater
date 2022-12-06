@@ -7,9 +7,9 @@ import {
   faSearch,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { getCountries } from '../redux/details';
+import { getCountries } from '../redux/Details';
 
-const HomePage = () => {
+const Home = () => {
   const dispatch = useDispatch();
   const { countries, status } = useSelector((state) => state.datas);
   const [search, setSearch] = useState('');
@@ -71,4 +71,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Home;
