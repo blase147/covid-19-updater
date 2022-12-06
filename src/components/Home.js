@@ -7,7 +7,7 @@ import {
   faSearch,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { getCountries } from '../redux/Details';
+import { getCountries } from '../redux/details';
 
 const Home = () => {
   const dispatch = useDispatch();

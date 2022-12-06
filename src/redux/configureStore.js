@@ -1,6 +1,6 @@
 import { applyMiddleware, combineReducers, configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
-import dataReducer from './Details';
+import dataReducer from './details';
 
 const reducers = combineReducers({
   datas: dataReducer,
