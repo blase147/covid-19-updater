@@ -18,7 +18,7 @@
 
 
 # Space-travelers-hub
-This is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
+This application displays the Covid19 Updates Statistical Data for all Continents in the World and you can also search by Continent name.
 
 # 🛠 Built With <a name="built-with"></a>
  > This project was built with; 
