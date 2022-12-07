@@ -48,7 +48,7 @@ This application displays Covid-19 updates(statistical data) for all continents 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # Live-Demo
-> Here is a link (https://blase147.github.io/react-captone/) to the live page.
+> Here is a link (https://covid-19-updater-app.netlify.app/) to the live page.
 
 # Recorded video
 > Here is a link (https://blase147.github.io/react-captone/) to the recorded video.
