@@ -18,7 +18,7 @@
 
 
 # COVID-19 UPDATE API
-This application displays Covid-19 update(statistical data) for all continents in the world and also allows searching such data by continent name.
+This application displays Covid-19 updates(statistical data) for all continents in the world and also allows searching such data by continent name.
 
 # 🛠 Built With <a name="built-with"></a>
  > This project was built with; 
