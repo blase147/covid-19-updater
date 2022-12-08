@@ -51,7 +51,7 @@ This application displays Covid-19 updates(statistical data) for all continents 
 > Here is a link (https://covid-19-updater-app.netlify.app/) to the live page.
 
 # Recorded video
-> Here is a link (https://www.loom.com/share/3061eb4d1c774b4ebcb980756a20e5a9) to the recorded video.
+> Here is a link (https://www.loom.com/share/7936fa0318024f3dab367145e34598a3) to the recorded video.
 
 
 
