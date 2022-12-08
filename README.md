@@ -147,7 +147,7 @@ npx eslint .
 Give a ⭐️ if you like this project!
 
 ## 🙏 🙏 Acknowledgments <a name="acknowledgements"></a>
-- I would like to thank [@microverseinc](https://github.com/microverseinc) for the templates and insights 
+- I would like to thank [@Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for the templates and insights 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
