@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { NavLink, } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import {
   faCircleArrowRight,
@@ -51,8 +51,8 @@ const Home = () => {
                   .toLowerCase()
                   .includes(search.toLowerCase()),
               ).map((item) => (
-                <div key={uuidv4()} className="country_display">
-                  <NavLink state={item} to="/details/updated">
+                <div key={item.updated} className="country_display">
+                  <NavLink state={item} to={`/details/${item.updated}`}>
                     <FontAwesomeIcon
                       icon={faCircleArrowRight}
                       className="arrow-right"
