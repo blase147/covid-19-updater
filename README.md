@@ -42,7 +42,7 @@ This application displays Covid-19 updates(statistical data) for all continents 
   </ul>
 </details>
 
-# Key Features <a name="key-features"></a>
+# Key Feature <a name="key-features"></a>
 - **Fetches Covid-19 prevalence  data by continent**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -51,7 +51,7 @@ This application displays Covid-19 updates(statistical data) for all continents 
 > Here is a link (https://covid-19-updater-app.netlify.app/) to the live page.
 
 # Recorded video
-> Here is a link (https://www.loom.com/share/7936fa0318024f3dab367145e34598a3) to the recorded video.
+> Here is a link (https://www.loom.com/share/719548b523fd4cd999bebb345a83c243) to the recorded video.
 
 
 
@@ -153,7 +153,7 @@ Give a ⭐️ if you like this project!
 
 ### 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/blase147/react-capstone-hub/blob/dev/LICENSE) licensed.
+This project is [MIT](https://github.com/blase147/react-capstone/blob/dev/LICENSE) licensed.
 
 
 

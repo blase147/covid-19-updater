@@ -1,4 +1,4 @@
-import { useLocation, NavLink } from 'react-router-dom';
+import { useLocation, NavLink, useParams } from 'react-router-dom';
 import {
   faCircleArrowLeft,
 } from '@fortawesome/free-solid-svg-icons';
@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Details = () => {
   const location = useLocation();
   const { state } = location;
+  // const { updated } = useParams();
 
   return (
     <div className="details">

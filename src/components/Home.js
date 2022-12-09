@@ -52,7 +52,7 @@ const Home = () => {
                   .includes(search.toLowerCase()),
               ).map((item) => (
                 <div key={uuidv4()} className="country_display">
-                  <NavLink state={item} to="/details">
+                  <NavLink state={item} to="/details/updated">
                     <FontAwesomeIcon
                       icon={faCircleArrowRight}
                       className="arrow-right"
