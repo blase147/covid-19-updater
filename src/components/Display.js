@@ -1,4 +1,4 @@
-import { useLocation, NavLink, } from 'react-router-dom';
+import { useLocation, NavLink } from 'react-router-dom';
 import {
   faCircleArrowLeft,
 } from '@fortawesome/free-solid-svg-icons';
